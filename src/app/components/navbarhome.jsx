@@ -1,24 +1,32 @@
+import React from "react"
+import Image from "next/image"
 import Link from "next/link"
 
 const NavbarHome = () => {
   return (
-    <nav class="flex items-center justify-between bg-green-500 p-4 text-white shadow-md">
-      <ul class="flex gap-4">
+    <nav className="flex items-center justify-between p-4">
+      <Link href="/" passHref className=" flex items-center md:mb-0">
+        <Image src="/svgs/logobranca.svg" alt="logo" width={50} height={30} />
+      </Link>
+
+      <ul className="flex gap-4">
         <li>
-          <Link href="/" class="font-bold text-xl">
-            Home
+          <Link
+            href="/src/pages/Sobre.jsx"
+            className=" text-xl transition duration-300 ease-in-out hover:text-green-600"
+          >
+            About
           </Link>
         </li>
         <li>
-          <Link href="/Sobre" class="font-bold text-xl">
-            Sobre
+          <Link
+            href="/login/Create"
+            className="text-xl transition duration-300 ease-in-out hover:text-green-600"
+          >
+            Login
           </Link>
         </li>
-        <li>
-          <Link href="/login/Create" class="font-bold text-xl">
-            login
-          </Link>
-        </li>
+        <li></li>
       </ul>
     </nav>
   )

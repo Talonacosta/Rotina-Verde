@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import NavbarHome from '@/app/components/navbarhome';
-import Main from '@/app/components/Main';
+import Titulo from '@/app/components/titulo';
 export default function Home() {
   return (
     <>
       <NavbarHome />
-      <Main />
+      <Titulo />
       
     </>
   );
